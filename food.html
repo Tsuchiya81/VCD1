@@ -1,0 +1,518 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Food</title>
+	
+<style type="text/css">
+#bigbox{
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+}
+#head{
+	background-color: #3D0C07;
+}
+
+ul.ddmenu {
+	margin: 0px;               /* メニューバー外側の余白(ゼロ) */
+	padding: 0px 0px 0px 15px; /* メニューバー内側の余白(左に15px) */
+	background-color: #3D0C07; /* バーの背景色(濃い赤色) */
+	text-align: center;
+}
+ul.ddmenu li {
+	width: 134px;           /* メニュー項目の横幅(125px) */
+   	display: inline-block;  /* ★1:横並びに配置する */
+   	list-style-type: none;  /* ★2:リストの先頭記号を消す */
+   	position: relative;     /* ★3:サブメニュー表示の基準位置にする */
+}
+ul.ddmenu a {
+   	background-color: #3D0C07; /* メニュー項目の背景色(濃い赤色) */
+   	color: white;              /* メニュー項目の文字色(白色) */
+   	line-height: 40px;         /* メニュー項目のリンクの高さ(40px) */
+	text-align: center;        /* メインメニューの文字列の配置(中央寄せ) */
+   	text-decoration: none;     /* メニュー項目の装飾(下線を消す) */
+   	font-weight: bold;         /* 太字にする */
+   	display: block;            /* ★4:項目内全域をリンク可能にする */
+	font-family:serif;
+}
+ul.ddmenu a:hover {
+   	background-color: #A95134; /* メニュー項目にマウスが載ったときの背景色(淡いピンク) */
+   	color: black;            /* メニュー項目にマウスが載ったときの文字色(濃い赤色) */
+}
+ul.ddmenu ul {
+  	display: none;       /* ★1:標準では非表示にする */
+   	margin: 0px;         /* ★2:サブメニュー外側の余白(ゼロ) */
+   	padding: 0px;        /* ★3:サブメニュー内側の余白(ゼロ) */
+   	position: absolute;  /* ★4:絶対配置にする */
+}
+ul.ddmenu li:hover ul {
+   	display: block;      /* ★5:マウスポインタが載っている項目の内部にあるリストを表示する */
+}
+ul.ddmenu ul li {   /* ※A */
+   	width: 150px;               /* サブメニュー1項目の横幅(135px) */
+   	border-top: 1px solid #A95134; /* 項目上側の枠線(ピンク色で1pxの実線) */
+}
+ul.ddmenu ul li a {   /* ※B */
+  	line-height: 35px;   /* サブメニュー1項目の高さ(35px) */
+   	text-align: left;    /* 文字列の配置(左寄せ) */
+   	padding-left: 5px;   /* 文字列前方の余白(5px) */
+   	font-weight: normal; /* 太字にはしない */
+}
+ul.ddmenu ul li a:hover {   /* ※C */
+   	background-color: #d85e30; /* サブメニュー項目にマウスが載ったときの背景色(淡い黄色) */
+   	color: black;            /* サブメニュー項目にマウスが載ったときの文字色(濃い緑色) */
+}
+
+.breadcrumbs li{
+	display: inline-block;
+    font-family: serif;
+    font-size: small;
+}
+.breadcrumbs li::after{
+	content: '>';
+	display: inline-block;
+	padding: 0 10px;
+}
+.breadcrumbs li:last-child::after{
+	display: none;
+}
+
+
+.footer{
+	background-color: #3D0C07;
+	color:#fff;
+	padding-left:  50px;
+}
+.text-align-right{
+  text-align: right;
+}
+
+
+#TOP{
+    width: 100%;
+    height: 50vh;
+    background-color: #E9E2D7;
+    padding-top: 5%;
+    font-family: serif;
+}
+#ti{
+    color: #3D0C07;
+    font-weight: bold;
+    text-align:center;
+    font-size: 3em;
+    padding-top: 5%;
+    font-family: serif;
+}
+#title{
+    border-bottom: 3px solid #FFFFFF;
+}
+
+.con{
+	background-color:#FFFFFF;
+	font-family: serif;
+    padding-bottom: 5%;
+	/*width: 80%;*/
+	margin: 0 auto;
+}
+
+#cot{
+	font-size: 2em;
+	font-weight: bold; 
+	text-align:center;
+	padding-top: 5%;
+}
+#kodawari{
+	border-bottom: 3px solid #E9E2D7;
+}
+#com{
+	margin:0 auto;
+	width: 70vw;
+	justify-content:space-between;
+	border-bottom: 2px solid #E9E2D7;
+	display: flex;
+}
+#m a{
+    font-size:medium;
+	text-align:center;
+	padding-top: 6em;
+}
+
+.pic{
+    padding-left: 10%;
+}
+.log{
+    font-family: serif;
+    display: flex;
+    padding-bottom: 10px;
+    padding-left: 20%;
+}
+#img{
+	margin:0 auto;
+	display: flex;
+	justify-content:center;
+}
+.name{
+	padding-left: 50px;
+}
+.price a{
+	padding-right: 50px;
+}
+
+</style>
+</head>
+
+<body>
+	<div id="bigbox">
+		<div id="head">
+			<div id="logo">
+		    	<img src="1x/logo.png" width="25%" height="auto" alt=""/> 
+			</div>
+			<ul class="ddmenu">
+				<li><a href="index.html">TOP</a></li>
+				<li><a href="NEWS.html">お知らせ</a></li>
+				<li><a href="kodawari.html">こだわり</a></li>
+				<li><a href="#">Menu ∨</a>
+					<ul>
+						<li><a href="food.html">Food</a></li>
+						<li><a href="drink.html">Drink</a></li>
+					</ul>
+				</li>
+				<li><a href="info.html">店舗情報</a></li>
+			</ul>
+            
+		</div>
+
+        
+
+        <div id="TOP">
+            <div id="ti">
+                <a id="title">Food</a><br>
+            </div>
+        </div>
+
+        <nav>
+            <ol class="breadcrumbs">
+                <li><a href="index.html">TOP</a></li>
+                <li>現在のページ</li>
+            </ol>
+            <br>
+        </nav>
+
+
+		<div class="con">
+			<div id="cot">
+				<a id="kodawari">PASTA</a>
+			</div>
+			<br>
+			<div id="img">
+				<img src="2022/1.jpg" width="20%" height="auto" alt=""/>
+				<img src="2022/pas0.png" width="20%" height="auto" alt=""/>
+			</div>
+			<br>
+			<div id="com">
+				<div class="name">
+					<a>ミートソーススパゲッティ</a>
+				</div>
+				<div class="price">
+					<a>……　1000yen</a>
+				</div>
+			</div>
+			<div id="com">
+				<div class="name">
+					<a>ペペロンチーノスパゲッティ</a>
+				</div>
+				<div class="price">
+					<a>……　1000yen</a>
+				</div>
+			</div>
+			<div id="com">
+				<div class="name">
+					<a>エビとトマトのクリームパスタ</a>
+				</div>
+				<div class="price">
+					<a>……　1200yen</a>
+				</div>
+			</div>
+			<div id="com">
+				<div class="name">
+					<a>シーフードスパゲッティ</a>
+				</div>
+				<div class="price">
+					<a>……　1300yen</a>
+				</div>
+			</div>
+			<div id="com">
+				<div class="name">
+					<a>ゴルゴンゾーラチーズのソースペンネ</a>
+				</div>
+				<div class="price">
+					<a>……　1500yen</a>
+				</div>
+			</div>
+			<div id="com">
+				<div class="name">
+					<a>キノコとアンチョビのスパゲッティ</a>
+				</div>
+				<div class="price">
+					<a>……　1500yen</a>
+				</div>
+			</div>
+			
+
+			<div id="cot">
+				<a id="kodawari">PIZZA</a>
+			</div>
+			<br>
+			<div id="img">
+				<img src="2022/pi0.png" width="20%" height="auto" alt=""/>
+				<img src="2022/pi1.png" width="20%" height="auto" alt=""/>
+			</div>
+			<br>
+			<div id="com">
+				<div class="name">
+					<a>生ハムのピザ</a>
+				</div>
+				<div class="price">
+					<a>……　900yen</a>
+				</div>
+			</div>
+			<div id="com">
+				<div class="name">
+					<a>マヨコーンピザ</a>
+				</div>
+				<div class="price">
+					<a>……　900yen</a>
+				</div>
+			</div><div id="com">
+				<div class="name">
+					<a>ベーコンマッシュピザ</a>
+				</div>
+				<div class="price">
+					<a>……　900yen</a>
+				</div>
+			</div>
+			<div id="com">
+				<div class="name">
+					<a>チーズ&チーズ</a>
+				</div>
+				<div class="price">
+					<a>……　1000yen</a>
+				</div>
+			</div>
+			<div id="com">
+				<div class="name">
+					<a>シェフの気まぐれトッピングピザ</a>
+				</div>
+				<div class="price">
+					<a>……　1000yen</a>
+				</div>
+			</div>
+			<div id="com">
+				<div class="name">
+					<a>ガーリックミート</a>
+				</div>
+				<div class="price">
+					<a>……　1000yen</a>
+				</div>
+			</div>
+
+
+			<div id="cot">
+				<a id="kodawari">APPETIZERS</a>
+			</div>
+			<br>
+			<div id="img">
+				<img src="2022/api0.jpg" width="20%" height="auto" alt=""/>
+				<img src="2022/api1.jpg" width="20%" height="auto" alt=""/>
+			</div>
+			<br>
+			<div id="com">
+				<div class="name">
+					<a>フライドポテト</a>
+				</div>
+				<div class="price">
+					<a>……　500yen</a>
+				</div>
+			</div>
+			<div id="com">
+				<div class="name">
+					<a>チーズ5種盛り合わせ</a>
+				</div>
+				<div class="price">
+					<a>……　600yen</a>
+				</div>
+			</div>
+			<div id="com">
+				<div class="name">
+					<a>トマトとモッツァレラチーズのオリーブ和え</a>
+				</div>
+				<div class="price">
+					<a>……　700yen</a>
+				</div>
+			</div>
+			<div id="com">
+				<div class="name">
+					<a>アヒージョ</a>
+				</div>
+				<div class="price">
+					<a>……　700yen</a>
+				</div>
+			</div>
+			<div id="com">
+				<div class="name">
+					<a>生ハム</a>
+				</div>
+				<div class="price">
+					<a>……　800yen</a>
+				</div>
+			</div>
+			<div id="com">
+				<div class="name">
+					<a>帆立のカルパッチョ</a>
+				</div>
+				<div class="price">
+					<a>……　900yen</a>
+				</div>
+			</div>
+			<div id="com">
+				<div class="name">
+					<a>本日の前菜盛り合わせ</a>
+				</div>
+				<div class="price">
+					<a>……　900yen</a>
+				</div>
+			</div>
+			
+
+
+
+			<div id="cot">
+				<a id="kodawari">SALAD</a>
+			</div>
+			<br>
+			<div id="img">
+				<img src="2022/sa1.png" width="20%" height="auto" alt=""/>
+			</div>
+			<br>
+			<div id="com">
+				<div class="name">
+					<a>スティックサラダ</a>
+				</div>
+				<div class="price">
+					<a>……　500yen</a>
+				</div>
+			</div>
+			<div id="com">
+				<div class="name">
+					<a>カリカリベーコンのシーザーサラダ</a>
+				</div>
+				<div class="price">
+					<a>……　700yen</a>
+				</div>
+			</div>
+			<div id="com">
+				<div class="name">
+					<a>ささみのカルパッチョ～柚の香りを添えて～</a>
+				</div>
+				<div class="price">
+					<a>……　800yen</a>
+				</div>
+			</div>
+			<div id="com">
+				<div class="name">
+					<a>タコとサーモンのシーフードサラダ</a>
+				</div>
+				<div class="price">
+					<a>……　1000yen</a>
+				</div>
+			</div>
+
+
+			<div id="cot">
+				<a id="kodawari">MEAT</a>
+			</div>
+			<br>
+			<div id="img">
+				<img src="2022/00-20-23_215.jpeg" width="20%" height="auto" alt=""/>
+				<img src="2022/DSC_1664.JPG" width="20%" height="auto" alt=""/>
+			</div>
+			<br>
+			<div id="com">
+				<div class="name">
+					<a>唐揚げ盛り合わせ</a>
+				</div>
+				<div class="price">
+					<a>……　800yen</a>
+				</div>
+			</div>
+			<div id="com">
+				<div class="name">
+					<a>ローストビーフ</a>
+				</div>
+				<div class="price">
+					<a>……　900yen</a>
+				</div>
+			</div>
+			<div id="com">
+				<div class="name">
+					<a>ビーフシチュー</a>
+				</div>
+				<div class="price">
+					<a>……　900yen</a>
+				</div>
+			</div>
+			<div id="com">
+				<div class="name">
+					<a>鴨肉のチーズグリル</a>
+				</div>
+				<div class="price">
+					<a>……　1000yen</a>
+				</div>
+			</div>
+			<div id="com">
+				<div class="name">
+					<a>若鶏の照り焼き風ステーキ</a>
+				</div>
+				<div class="price">
+					<a>……　1000yen</a>
+				</div>
+			</div>
+			<div id="com">
+				<div class="name">
+					<a>若鶏のトマトソース煮込み</a>
+				</div>
+				<div class="price">
+					<a>……　1000yen</a>
+				</div>
+			</div>
+			<div id="com">
+				<div class="name">
+					<a>国産牛ハンバーグ</a>
+				</div>
+				<div class="price">
+					<a>……　1100yen</a>
+				</div>
+			</div>
+			<div id="com">
+				<div class="name">
+					<a>国産牛ステーキ</a>
+				</div>
+				<div class="price">
+					<a>……　1200yen</a>
+				</div>
+			</div>
+		</div>        
+
+
+		<footer class="footer">
+			<a>Italian CIT<br> 電話:000 - 1234 - 5678</a>
+			<div class="text-align-right">
+				<a> ItalianCIT Co,. Ltd. All rights reserved.</a>
+			</div>
+		</footer>
+
+			
+	</div>
+</body>
+</html>

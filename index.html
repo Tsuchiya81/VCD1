@@ -1,0 +1,189 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>index</title>
+	
+<style type="text/css">
+#bigbox{
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+}
+#head{
+	background-color: #3D0C07;
+}
+
+ul.ddmenu {
+	margin: 0px;               /* メニューバー外側の余白(ゼロ) */
+	padding: 0px 0px 0px 15px; /* メニューバー内側の余白(左に15px) */
+	background-color: #3D0C07; /* バーの背景色(濃い赤色) */
+	text-align: center;
+}
+ul.ddmenu li {
+	width: 134px;           /* メニュー項目の横幅(125px) */
+   	display: inline-block;  /* ★1:横並びに配置する */
+   	list-style-type: none;  /* ★2:リストの先頭記号を消す */
+   	position: relative;     /* ★3:サブメニュー表示の基準位置にする */
+}
+ul.ddmenu a {
+   	background-color: #3D0C07; /* メニュー項目の背景色(濃い赤色) */
+   	color: white;              /* メニュー項目の文字色(白色) */
+   	line-height: 40px;         /* メニュー項目のリンクの高さ(40px) */
+	text-align: center;        /* メインメニューの文字列の配置(中央寄せ) */
+   	text-decoration: none;     /* メニュー項目の装飾(下線を消す) */
+   	font-weight: bold;         /* 太字にする */
+   	display: block;            /* ★4:項目内全域をリンク可能にする */
+	font-family:serif;
+}
+ul.ddmenu a:hover {
+   	background-color: #A95134; /* メニュー項目にマウスが載ったときの背景色(淡いピンク) */
+   	color: black;            /* メニュー項目にマウスが載ったときの文字色(濃い赤色) */
+}
+ul.ddmenu ul {
+  	display: none;       /* ★1:標準では非表示にする */
+   	margin: 0px;         /* ★2:サブメニュー外側の余白(ゼロ) */
+   	padding: 0px;        /* ★3:サブメニュー内側の余白(ゼロ) */
+   	position: absolute;  /* ★4:絶対配置にする */
+}
+ul.ddmenu li:hover ul {
+   	display: block;      /* ★5:マウスポインタが載っている項目の内部にあるリストを表示する */
+}
+ul.ddmenu ul li {   /* ※A */
+   	width: 150px;               /* サブメニュー1項目の横幅(135px) */
+   	border-top: 1px solid #A95134; /* 項目上側の枠線(ピンク色で1pxの実線) */
+}
+ul.ddmenu ul li a {   /* ※B */
+  	line-height: 35px;   /* サブメニュー1項目の高さ(35px) */
+   	text-align: left;    /* 文字列の配置(左寄せ) */
+   	padding-left: 5px;   /* 文字列前方の余白(5px) */
+   	font-weight: normal; /* 太字にはしない */
+}
+ul.ddmenu ul li a:hover {   /* ※C */
+   	background-color: #d85e30; /* サブメニュー項目にマウスが載ったときの背景色(淡い黄色) */
+   	color: black;            /* サブメニュー項目にマウスが載ったときの文字色(濃い緑色) */
+}
+
+
+#hap{
+	width: 100%;
+	height: 564px;
+	background-image: url(2022/20-.png);
+	background-size: cover;	
+	/*text-align:center;*/
+	font-family: serif;
+	color: azure;
+	font-size: 2vw;
+}
+span{
+	color: #3D0C07;
+	font-size: 5vw;
+	background-color: rgba(255, 255, 255, 0.785);
+}
+
+.ahan{
+	padding-top: 7em;
+	padding-left: 15em;
+}
+
+#con{
+	background-color:#E9E2D7;
+	font-family: serif;
+}
+#cot{
+	font-size: 2em;
+	font-weight: bold; 
+	text-align:center;
+	padding-top: 5%;
+}
+#Concept{
+	border-bottom: 3px solid #FFFFFF;
+}
+#com{
+	justify-content: center;
+	display: flex;
+	padding-bottom: 5%;
+}
+#m{
+	text-align:center;
+	padding-top: 6em;
+}
+.footer{
+	background-color: #3D0C07;
+	color:#fff;
+	padding-left:  50px;
+}
+.text-align-right{
+  text-align: right;
+}
+
+.breadcrumbs li{
+	display: inline-block;
+}
+.breadcrumbs li::after{
+	content: '>';
+	display: inline-block;
+	padding: 0 10px;
+}
+.breadcrumbs li:last-child::after{
+	display: none;
+}
+
+</style>
+</head>
+
+<body>
+	<div id="bigbox">
+		<div id="head">
+			<div id="logo">
+		    	<img src="1x/logo.png" width="25%" height="auto" alt=""/> 
+			</div>
+			<ul class="ddmenu">
+				<li><a href="index.html">TOP</a></li>
+				<li><a href="NEWS.html">お知らせ</a></li>
+				<li><a href="kodawari.html">こだわり</a></li>
+				<li><a href="#">Menu ∨</a>
+					<ul>
+						<li><a href="food.html">Food</a></li>
+						<li><a href="drink.html">Drink</a></li>
+					</ul>
+				</li>
+				<li><a href="info.html">店舗情報</a></li>
+			</ul>
+		</div>
+
+
+		<div id="hap">
+			<div class="ahan">
+				<span class="hap">『幸せを呼ぶ』</span>
+				<br>
+				<br>
+				<a class="hap">　ワインと国産牛とチーズのお店です</a>
+			</div>
+		</div>
+
+		<div id="con">
+			<div id="cot">
+				<a id="Concept">Concept</a>
+			</div>
+			<br>
+			<div id="com">
+				<div id="m">
+					<a>『普段使いの気取らない贅沢をしませんか？』</a><br>
+					<a>ワインの専門家はいません。<br>
+						自分達が美味しいと思ったワインだけをご用意しております。</a>
+				</div>
+				<img src="2022/wine.jpg" width="25%" height="auto" alt=""/>
+			</div>
+		</div>
+
+		<footer class="footer">
+			<a>Italian CIT<br> 電話:000 - 1234 - 5678</a>
+			<div class="text-align-right">
+				<a> ItalianCIT Co,. Ltd. All rights reserved.</a>
+			</div>
+		</footer>
+
+	</div>
+</body>
+</html>

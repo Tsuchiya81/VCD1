@@ -1,0 +1,237 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>info</title>
+	
+<style type="text/css">
+#bigbox{
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+}
+#head{
+	background-color: #3D0C07;
+}
+
+ul.ddmenu {
+	margin: 0px;               /* メニューバー外側の余白(ゼロ) */
+	padding: 0px 0px 0px 15px; /* メニューバー内側の余白(左に15px) */
+	background-color: #3D0C07; /* バーの背景色(濃い赤色) */
+	text-align: center;
+}
+ul.ddmenu li {
+	width: 134px;           /* メニュー項目の横幅(125px) */
+   	display: inline-block;  /* ★1:横並びに配置する */
+   	list-style-type: none;  /* ★2:リストの先頭記号を消す */
+   	position: relative;     /* ★3:サブメニュー表示の基準位置にする */
+}
+ul.ddmenu a {
+   	background-color: #3D0C07; /* メニュー項目の背景色(濃い赤色) */
+   	color: white;              /* メニュー項目の文字色(白色) */
+   	line-height: 40px;         /* メニュー項目のリンクの高さ(40px) */
+	text-align: center;        /* メインメニューの文字列の配置(中央寄せ) */
+   	text-decoration: none;     /* メニュー項目の装飾(下線を消す) */
+   	font-weight: bold;         /* 太字にする */
+   	display: block;            /* ★4:項目内全域をリンク可能にする */
+	font-family:serif;
+}
+ul.ddmenu a:hover {
+   	background-color: #A95134; /* メニュー項目にマウスが載ったときの背景色(淡いピンク) */
+   	color: black;            /* メニュー項目にマウスが載ったときの文字色(濃い赤色) */
+}
+ul.ddmenu ul {
+  	display: none;       /* ★1:標準では非表示にする */
+   	margin: 0px;         /* ★2:サブメニュー外側の余白(ゼロ) */
+   	padding: 0px;        /* ★3:サブメニュー内側の余白(ゼロ) */
+   	position: absolute;  /* ★4:絶対配置にする */
+}
+ul.ddmenu li:hover ul {
+   	display: block;      /* ★5:マウスポインタが載っている項目の内部にあるリストを表示する */
+}
+ul.ddmenu ul li {   /* ※A */
+   	width: 150px;               /* サブメニュー1項目の横幅(135px) */
+   	border-top: 1px solid #A95134; /* 項目上側の枠線(ピンク色で1pxの実線) */
+}
+ul.ddmenu ul li a {   /* ※B */
+  	line-height: 35px;   /* サブメニュー1項目の高さ(35px) */
+   	text-align: left;    /* 文字列の配置(左寄せ) */
+   	padding-left: 5px;   /* 文字列前方の余白(5px) */
+   	font-weight: normal; /* 太字にはしない */
+}
+ul.ddmenu ul li a:hover {   /* ※C */
+   	background-color: #d85e30; /* サブメニュー項目にマウスが載ったときの背景色(淡い黄色) */
+   	color: black;            /* サブメニュー項目にマウスが載ったときの文字色(濃い緑色) */
+}
+
+.breadcrumbs li{
+	display: inline-block;
+    font-family: serif;
+    font-size: small;
+}
+.breadcrumbs li::after{
+	content: '>';
+	display: inline-block;
+	padding: 0 10px;
+}
+.breadcrumbs li:last-child::after{
+	display: none;
+}
+
+
+.footer{
+	background-color: #3D0C07;
+	color:#fff;
+	padding-left:  50px;
+}
+.text-align-right{
+  text-align: right;
+}
+
+
+#TOP{
+    width: 100%;
+    height: 50vh;
+    background-color: #E9E2D7;
+    padding-top: 5%;
+    font-family: serif;
+}
+#ti{
+    color: #3D0C07;
+    font-weight: bold;
+    text-align:center;
+    font-size: 3em;
+    padding-top: 5%;
+    font-family: serif;
+}
+#title{
+    border-bottom: 3px solid #FFFFFF;
+}
+
+.con{
+	background-color:#FFFFFF;
+	font-family: serif;
+    padding-bottom: 5%;
+	/*width: 80%;*/
+	margin: 0 auto;
+}
+
+#cot{
+	font-size: 2em;
+	font-weight: bold; 
+	text-align:center;
+	padding-top: 5%;
+}
+#com{
+	margin:0 auto;
+	width: 70vw;
+    display: flex;
+}
+#com p{
+    text-align:center;
+	padding-left: 10%;
+}
+#m a{
+    font-size:medium;
+	text-align:center;
+	padding-top: 6em;
+}
+
+.pic{
+    padding-left: 10%;
+}
+.log{
+    font-family: serif;
+    display: flex;
+    padding-bottom: 10px;
+    padding-left: 20%;
+}
+#img{
+	margin:0 auto;
+	display: flex;
+	justify-content:center;
+}
+.name{
+	padding-left: 50px;
+}
+.price a{
+	padding-right: 50px;
+}
+iframe{
+    justify-content:center;
+    margin:0 auto;
+    text-align:center;
+}
+
+</style>
+</head>
+
+<body>
+	<div id="bigbox">
+		<div id="head">
+			<div id="logo">
+		    	<img src="1x/logo.png" width="25%" height="auto" alt=""/> 
+			</div>
+			<ul class="ddmenu">
+				<li><a href="index.html">TOP</a></li>
+				<li><a href="NEWS.html">お知らせ</a></li>
+				<li><a href="kodawari.html">こだわり</a></li>
+				<li><a href="#">Menu ∨</a>
+					<ul>
+						<li><a href="food.html">Food</a></li>
+						<li><a href="drink.html">Drink</a></li>
+					</ul>
+				</li>
+				<li><a href="info.html">店舗情報</a></li>
+			</ul>
+            
+		</div>
+
+        
+
+        <div id="TOP">
+            <div id="ti">
+                <a id="title">店舗情報</a><br>
+            </div>
+        </div>
+
+        <nav>
+            <ol class="breadcrumbs">
+                <li><a href="index.html">TOP</a></li>
+                <li>現在のページ</li>
+            </ol>
+            <br>
+        </nav>
+
+
+		<div class="con">
+			<div id="cot">
+				<a id="kodawari">地図</a>
+			</div>
+			<br>
+			<div id="com">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.522380192788!2d140.0188052146421!3d35.68876073716765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x602280271c38ab81%3A0x9b26ed71e15bb456!2z5Y2D6JGJ5bel5qWt5aSn5a2mIOa0peeUsOayvOOCreODo-ODs-ODkeOCuQ!5e0!3m2!1sja!2sjp!4v1667999510205!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <p>都田沼駅より徒歩2分とアクセス抜群！！<br>
+                    お仕事帰りや大切なパートナー、そしてひとり飲みにも様々なシーンにご利用下さい。<br>
+                    <br>
+                    女子会、記念日、友人とお気軽にどうぞ！！<br>
+	                ※８名様以上の貸切は定休日でもお気軽にお電話でご相談ください。</p>
+
+                </p>
+            </div>
+        </div>
+
+		
+
+
+		<footer class="footer">
+			<a>Italian CIT<br> 電話:000 - 1234 - 5678</a>
+			<div class="text-align-right">
+				<a> ItalianCIT Co,. Ltd. All rights reserved.</a>
+			</div>
+		</footer>
+
+			
+	</div>
+</body>
+</html>
